@@ -1,0 +1,72 @@
+[
+    {
+      "id": 1,
+      "type": "Book",
+      "title": "The Art of Piano Playing",
+      "description": "A classic guide that covers fundamental piano techniques—including proper posture, hand positioning, and dynamic control—to build a strong technical foundation.",
+      "link": "https://www.amazon.com/Art-Piano-Playing-Heinrich-Neuhaus/dp/0679721528"
+    },
+    {
+      "id": 2,
+      "type": "Video",
+      "title": "Hand Position at the Piano: 5 Foundations of Piano Technique, Part 1",
+      "description": "An in‐depth exploration of optimal hand positioning with practical strategies and exercises designed to keep your technique relaxed and effective.",
+      "link": "https://www.youtube.com/watch?v=cBuC89ApQtM"
+    },
+    {
+      "id": 3,
+      "type": "Exercise",
+      "title": "Metronome Mastery",
+      "description": "A structured exercise routine that helps develop a consistent tempo and rhythmic precision by gradually increasing speed using a metronome.",
+      "link": "https://www.musictheory.net/exercises"
+    },
+    {
+      "id": 4,
+      "type": "Video",
+      "title": "Piano Pedal Mastery",
+      "description": "A comprehensive tutorial that demystifies pedal usage—teaching when and how to apply the sustain pedal for clear phrasing and enhanced musical expression.",
+      "link": "https://www.youtube.com/watch?v=H_v5VdEDrHs"
+    },
+    {
+      "id": 5,
+      "type": "Exercise",
+      "title": "Advanced Finger Independence Exercises",
+      "description": "A set of challenging exercises aimed at improving finger dexterity and strength, essential for managing intricate passages and developing independence.",
+      "link": "https://www.youtube.com/watch?v=W4sgMYqfMdw"
+    },
+    {
+      "id": 6,
+      "type": "Exercise",
+      "title": "Dynamic Control Practice",
+      "description": "An exercise routine focused on enhancing sensitivity to dynamic changes—guiding you through gradual crescendos and decrescendos to achieve expressive performance."
+    },
+    {
+      "id": 7,
+      "type": "Video",
+      "title": "3 Ways to Change HAND POSITIONS & Other Practicing Tips",
+      "description": "A tutorial that demonstrates three effective methods to vary your hand positions on the keyboard and improve fluidity during transitions.",
+      "link": "https://www.youtube.com/watch?v=hSfF6Ac9lpQ"
+    },
+    {
+      "id": 8,
+      "type": "Video",
+      "title": "First Thing on Piano: Proper Body and Hand Postures",
+      "description": "A practical video tutorial demonstrating how to set up your bench, align your body, and relax your hands for optimal piano technique.",
+      "link": "https://www.youtube.com/watch?v=2mxlG5bzcyQ"
+    },
+    {
+      "id": 9,
+      "type": "Book",
+      "title": "Hanon: The Virtuoso Pianist in Sixty Exercises",
+      "description": "A traditional exercise book focusing on finger strength, independence, and agility, helping develop technical precision and flexibility.",
+      "link": "https://www.amazon.com/Hanon-Virtuoso-Pianist-Sixty-Exercises/dp/0878339094"
+    },
+    {
+      "id": 10,
+      "type": "Video",
+      "title": "Mastering Piano Dynamics",
+      "description": "A comprehensive video guide on controlling volume and expression on the piano, focusing on the balance between force and finesse to achieve varied dynamics.",
+      "link": "https://www.youtube.com/watch?v=IYdGJj6tEW0"
+    }
+  ]
+  

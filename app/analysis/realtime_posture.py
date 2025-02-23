@@ -59,7 +59,7 @@ class RealTimePostureAnalyzer(PostureAnalyzer):
                     f"FPS: {fps:.1f}",
                     f"Shoulder difference: {shoulder_diff:.3f}",
                     f"Back angle: {back_angle:.1f}",
-                    f"Forearm angle dev: {forearm_angle:.1f}",
+                    f"Forearm angle: {forearm_angle:.1f}",
                     f"Rating: {rating}"
                 ]
 

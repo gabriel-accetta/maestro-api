@@ -16,5 +16,4 @@ def analyze():
 
     video = request.files['video']
     result = analyze_video(video)
-    print(f"/analyze Response: {result}")
     return jsonify(result)
