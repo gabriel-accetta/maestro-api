@@ -6,3 +6,5 @@ openai
 python-dotenv
 pidantic
 flask_cors
+moviepy==1.0.3
+librosa

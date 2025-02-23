@@ -4,35 +4,31 @@
       "type": "Book",
       "title": "The Art of Piano Playing",
       "description": "A classic guide that covers fundamental piano techniques—including proper posture, hand positioning, and dynamic control—to build a strong technical foundation.",
-      "link": "https://www.amazon.com/Art-Piano-Playing-Heinrich-Neuhaus/dp/0679721528"
+      "link": "https://www.amazon.com/Art-Piano-Playing-Heinrich-Neuhaus/dp/1871082455"
     },
     {
       "id": 2,
-      "type": "Video",
-      "title": "Hand Position at the Piano: 5 Foundations of Piano Technique, Part 1",
-      "description": "An in‐depth exploration of optimal hand positioning with practical strategies and exercises designed to keep your technique relaxed and effective.",
-      "link": "https://www.youtube.com/watch?v=cBuC89ApQtM"
+      "type": "Book",
+      "title": "Rhythm Training for Pianists",
+      "description": "A comprehensive rhythm training book that offers exercises, drills, and practice routines to improve rhythmic accuracy and precision.",
+      "link": "https://www.amazon.com/Rhythm-Training-Pianists-Anthony-Nagid/dp/B0DC144W4R"
     },
     {
       "id": 3,
       "type": "Exercise",
-      "title": "Metronome Mastery",
-      "description": "A structured exercise routine that helps develop a consistent tempo and rhythmic precision by gradually increasing speed using a metronome.",
-      "link": "https://www.musictheory.net/exercises"
+      "title": "Metronome Practice",
+      "description": "A structured exercise routine that helps develop a consistent tempo and rhythmic precision",
+      "link": "https://www.youtube.com/watch?v=XGKdMYSitAY"
     },
     {
       "id": 4,
       "type": "Video",
-      "title": "Piano Pedal Mastery",
-      "description": "A comprehensive tutorial that demystifies pedal usage—teaching when and how to apply the sustain pedal for clear phrasing and enhanced musical expression.",
-      "link": "https://www.youtube.com/watch?v=H_v5VdEDrHs"
+      "title": "Fastest Way To Improve Your Rhythm",
+      "description": "A video tutorial that provides tips and strategies to enhance your rhythmic skills, focusing on timing, syncopation, and groove.",
+      "link": "https://www.youtube.com/watch?v=KKNaT-XYKmw"
     },
     {
-      "id": 5,
-      "type": "Exercise",
-      "title": "Advanced Finger Independence Exercises",
-      "description": "A set of challenging exercises aimed at improving finger dexterity and strength, essential for managing intricate passages and developing independence.",
-      "link": "https://www.youtube.com/watch?v=W4sgMYqfMdw"
+      "id": 5
     },
     {
       "id": 6,
@@ -41,11 +37,7 @@
       "description": "An exercise routine focused on enhancing sensitivity to dynamic changes—guiding you through gradual crescendos and decrescendos to achieve expressive performance."
     },
     {
-      "id": 7,
-      "type": "Video",
-      "title": "3 Ways to Change HAND POSITIONS & Other Practicing Tips",
-      "description": "A tutorial that demonstrates three effective methods to vary your hand positions on the keyboard and improve fluidity during transitions.",
-      "link": "https://www.youtube.com/watch?v=hSfF6Ac9lpQ"
+      "id": 7
     },
     {
       "id": 8,

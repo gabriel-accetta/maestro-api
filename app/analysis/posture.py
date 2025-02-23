@@ -24,16 +24,16 @@ class PostureConfig:
     MIN_DETECTION_CONFIDENCE: float = 0.5
     MIN_TRACKING_CONFIDENCE: float = 0.5
     # Score weights (must sum to 1.0)
-    BACK_ANGLE_WEIGHT: float = 0.8
+    BACK_ANGLE_WEIGHT: float = 0.6
     SHOULDER_WEIGHT: float = 0.1
-    FOREARM_ANGLE_WEIGHT: float = 0.1
+    FOREARM_ANGLE_WEIGHT: float = 0.3
     # Score thresholds
     SCORE_THRESHOLD_EXCELLENT: float = 0.85
     SCORE_THRESHOLD_GOOD: float = 0.70
     # Maximum allowed values for rating calculations
-    MAX_SHOULDER_DIFFERENCE: float = 1.5
+    MAX_SHOULDER_DIFFERENCE: float = 2
     MAX_BACK_ANGLE: float = 35.0  # degrees
-    MAX_FOREARM_ANGLE: float = 45.0  # degrees
+    MAX_FOREARM_ANGLE: float = 65.0  # degrees
 
     def __post_init__(self):
         weights_sum = self.BACK_ANGLE_WEIGHT + self.SHOULDER_WEIGHT + self.FOREARM_ANGLE_WEIGHT
@@ -112,7 +112,11 @@ class PostureAnalyzer:
             'right_wrist': (
                 landmarks[self.mp_pose.PoseLandmark.RIGHT_WRIST].x,
                 landmarks[self.mp_pose.PoseLandmark.RIGHT_WRIST].y
-            )
+            ),
+            'first_finger': (
+                landmarks[self.mp_pose.PoseLandmark.LEFT_INDEX].x,
+                landmarks[self.mp_pose.PoseLandmark.LEFT_INDEX].y
+            ),
         }
     
     def calculate_shoulder_difference(self, landmarks: dict) -> float:
@@ -336,6 +340,9 @@ class PostureAnalyzer:
             "Then on a new line starting with 'Recommendations:', provide up to 3 recommendation IDs "
             "from the available resources, separated by commas. Choose IDs that are most relevant "
             "to help improve the identified issues. Do not choose IDs that are not relevant."
+            "The recommendation format should be as follows:\n"
+            "Recommendations: 1, 2, 3\n"
+            "Do not include any values on the suggestios response, since the user does not need to see them."
         )
 
         prompt_text = (
@@ -441,7 +448,7 @@ class PostureAnalyzer:
         avg_forearm_angle = self.calculate_average_forearm_angle(posture_data)
         logging.info(f"Average shoulder difference: {avg_shoulder_diff:.3f}")
         logging.info(f"Average back angle: {avg_back_angle:.1f}°")
-        logging.info(f"Average forearm angle deviation: {avg_forearm_angle:.1f}°")
+        logging.info(f"Average forearm angle deviation: {avg_forearm_angle:.1f}")
         
         rating = self.get_posture_rating(avg_shoulder_diff, avg_back_angle, avg_forearm_angle)
         logging.info(f"Final posture rating: {rating}")
@@ -470,7 +477,7 @@ class PostureAnalyzer:
         total_angle = sum(self.calculate_forearm_angle(pd) for pd in posture_data)
         return total_angle / len(posture_data)
 
-    def generate_error_response(self) -> str:
+    def generate_error_response(self) -> Dict:
         """Generate error response when not enough data is collected."""
         return {
             "title": "Posture",
@@ -494,21 +501,17 @@ class PostureAnalyzer:
     
     def process_video_from_file(self, video_file) -> str:
         """Process video from a file object and analyze posture."""
-        # Save temporary file
-        temp_path = "temp_video.mp4"
-        video_file.save(temp_path)
+        # If input is already a path, use it directly
+        if isinstance(video_file, str):
+            return self.process_video(video_file)
         
-        try:
-            return self.process_video(temp_path)
-        finally:
-            # Clean up temporary file
-            if os.path.exists(temp_path):
-                os.remove(temp_path)
-                logging.info("Temporary video file removed")
+        # If input is a file object, assume it's already been saved
+        # and the path is passed
+        return self.process_video(video_file)
 
 
 def analyze_posture(video_file) -> str:
-    """Main function to analyze pianist's posture from a file object."""
+    """Main function to analyze pianist's posture."""
     analyzer = PostureAnalyzer()
     return analyzer.process_video_from_file(video_file)
 

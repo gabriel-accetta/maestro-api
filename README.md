@@ -1,67 +1,54 @@
-# Maestro API - Piano performance analyzer
+# Maestro - Piano Performance Analyzer (API)
 
-A comprehensive API system for piano performance analysis using computer vision and machine learning.
-
-## Overview
-
-This project consists of two main components:
-- REST API for handling data and analysis results
-- Real-time posture analyzer using computer vision
-
-## Prerequisites
-
-- Python 3.8+
-- Webcam or video input device
-- Required Python packages (install via pip):
-  ```bash
-  pip install -r requirements.txt
-  ```
-
-## Setup
-
-1. Clone the repository:
-   ```bash
-   git clone [repository-url]
-   cd maestro-api
-   ```
-
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. Configure environment variables:
-   ```bash
-   cp .env.example .env
-   # Edit .env file with your configurations
-   ```
-
-## Running the Application
-
-### REST API Server
-
-Start the API server:
-```bash
-python .\run.py
-```
-
-The API will be available at `http://localhost:5000`
-
-### Real-time Posture Analyzer
-
-Launch the real-time posture analysis:
-```bash
-python -m app.analysis.realtime_posture
-```
-
-This will start the webcam feed and begin analyzing posture in real-time.
+Maestro API is the backend service that powers the piano performance analysis system. It processes video input to analyze various aspects of piano playing technique using computer vision and machine learning.
 
 ## Features
 
-- REST API endpoints for different technique analysis
-- Real-time posture detection and analysis
+- Real-time posture analysis
+- Hand position tracking
+- Tempo detection
+- Pedal usage analysis
+- Dynamic level assessment
+
+## Project Structure
+
+This repository contains the backend API built with Python. The frontend application can be found at:
+https://github.com/gabriel-accetta/maestro-front
+
+## Prerequisites
+
+- Python 3.8 or higher
+- pip package manager
+
+## Getting Started
+
+1. Clone the repository:
+```bash
+git clone [your-repository-url]
+cd maestro-api
+```
+
+2. Create and activate a virtual environment (recommended):
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
+3. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+4. Start the API server:
+```bash
+python run.py
+```
+
+5. The API will be available at http://127.0.0.1:5000
 
 ## API Endpoints
 
-- `GET /` - Check API health
-- `POST /analyze` - Submit video for analysis
+### Analysis Endpoints
+
+- `POST /analyze`
+  - 
