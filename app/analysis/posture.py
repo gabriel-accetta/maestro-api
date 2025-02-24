@@ -260,7 +260,7 @@ class PostureAnalyzer:
             f"Time: {current_second}s / {total_seconds}s",
             f"Shoulder difference: {shoulder_diff:.3f}",
             f"Back angle: {back_angle:.1f}",
-            f"Forearm angle dev: {forearm_angle:.1f}°",
+            f"Forearm angle dev: {forearm_angle:.1f}",
             f"Rating: {rating}"
         ]
 

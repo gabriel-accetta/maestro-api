@@ -11,8 +11,8 @@ from scipy.ndimage import uniform_filter1d
 @dataclass
 class DynamicsConfig:
     # Thresholds for dynamics analysis - adjusted based on real performance data
-    DYNAMICS_CV_THRESHOLD_EXCELLENT: float = 0.75  # Was 0.25 - now accommodates natural piano dynamics
-    DYNAMICS_CV_THRESHOLD_GOOD: float = 1.00       # Was 0.40 - adjusted for realistic variation
+    DYNAMICS_CV_THRESHOLD_EXCELLENT: float = 0.75  
+    DYNAMICS_CV_THRESHOLD_GOOD: float = 1.00       
     MIN_AUDIO_DURATION: float = 5.0                # Minimum duration in seconds
     SMOOTHING_WINDOW: int = 50                     # Window size for smoothing
     # Analysis parameters
@@ -87,7 +87,6 @@ class DynamicsAnalyzer:
             
             recommendations_arr = []
             
-            # Updated feedback messages to reflect more realistic expectations
             if cv < self.config.DYNAMICS_CV_THRESHOLD_EXCELLENT:
                 rating = "Excellent"
                 feedback = ["Your dynamic control demonstrates professional-level consistency while maintaining expressive variation."]
